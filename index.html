@@ -195,6 +195,7 @@
             top: 0;
             z-index: 1000;
             padding: 0.5rem 0;
+            
         }
 
         nav {
@@ -202,6 +203,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0.5rem 0;
+            
         }
 
         .logo img {
@@ -224,6 +226,8 @@
             font-size: 0.9375rem;
             position: relative;
             padding: 0.5rem 0;
+            text-decoration: none !important;
+            color: inherit;
         }
 
         .menu a::after {
@@ -244,10 +248,12 @@
 
         .menu a.active {
             color: var(--primary-color);
+            text-decoration: none;
         }
 
         .menu a:hover {
             color: var(--primary-color);
+            text-decoration: none;
         }
 
         .cta-button {
@@ -414,9 +420,12 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 60px;
-            overflow: hidden; /* Add this to contain the slider */
-    width: 100%; /* Ensure it doesn't exceed viewport */
-    box-sizing: border-box; /* Include padding in width calculation */
+            overflow: hidden;
+            /* Add this to contain the slider */
+            width: 100%;
+            /* Ensure it doesn't exceed viewport */
+            box-sizing: border-box;
+            /* Include padding in width calculation */
         }
 
         .portfolio-slider {
@@ -1042,7 +1051,7 @@
         .testimonials {
             background-color: var(--white);
             padding: 5rem 0;
-        
+
         }
 
         .testimonial-container {
@@ -1337,7 +1346,7 @@
         }
 
         .newsletter button {
-            width: 100%;
+            width: 40%;
             margin-bottom: 1rem;
         }
 
@@ -1447,7 +1456,7 @@
             background-color: var(--gray-light);
         }
 
-        
+
         /* ============ Animations ============ */
         @keyframes fadeIn {
             from {
@@ -1640,23 +1649,24 @@
             <div class="services-grid">
                 <div class="service-card">
                     <img src="mobile.png" alt="Custom Software">
-                    <h2>Custom Software Development</h2>
-                    <h3>Web & mobile applications tailored to business needs.</h3>
+                    <h2 style="color: #388E3C;">Custom Software Development</h2>
+                    <h3 style="color: #0030a8;">Web & mobile applications tailored to business needs.</h3>
                 </div>
                 <div class="service-card">
                     <img src="icon2.png" alt="AI">
-                    <h2>Generative AI Development</h2>
-                    <h3>AI-powered solutions for automation and innovation.</h3>
+                    <h2 style="color: #388E3C;">Generative AI Development</h2>
+                    <h3 style="color: #0030a8;">AI-powered solutions for automation and innovation.</h3>
                 </div>
                 <div class="service-card">
                     <img src="pen-pencil.png" alt="Product Engineering">
-                    <h2>Product Engineering & Consultation</h2>
-                    <h3>Expert guidance on how to build, what to build, and how to scale.</h3>
+                    <h2 style="color: #388E3C;">Product Engineering & Consultation</h2>
+                    <h3 style="color: #0030a8;">Expert guidance on how to build, what to build, and how to scale.</h3>
                 </div>
                 <div class="service-card">
                     <img src="pie_chart.png" alt="Growth">
-                    <h2>Growth and Description</h2>
-                    <h3>We help startups and SMEs turn ideas into scalable digital products—cost-effectively.</h3>
+                    <h2 style="color: #388E3C;">Growth and Description</h2>
+                    <h3 style="color: #0030a8;">We help startups and SMEs turn ideas into scalable digital
+                        products—cost-effectively.</h3>
                 </div>
             </div>
         </div>
@@ -1686,7 +1696,10 @@
                 <div class="portfolio-slide active" style="background-color: #0030a8;">
                     <div class="portfolio-content" style="background-color: #0030a8;">
                         <img src="tennispal.png" alt="TennisPAL" class="portfolio-logo">
-                        <p class="portfolio-description" style="color: white;">TennisPAL is a community where you can find and connect with other like-minded tennis players using the app. Use TennisPAL to find your next tennis partner, share your favourite moments, discover a new tennis court, and more. Meet, play, share, and learn tennis, anytime, anywhere!</p>
+                        <p class="portfolio-description" style="color: white;">TennisPAL is a community where you can
+                            find and connect with other like-minded tennis players using the app. Use TennisPAL to find
+                            your next tennis partner, share your favourite moments, discover a new tennis court, and
+                            more. Meet, play, share, and learn tennis, anytime, anywhere!</p>
                         <div class="portfolio-apps">
                             <h3 style="color: white;">Available on:</h3>
                             <div class="app-badges">
@@ -1701,11 +1714,11 @@
                         <div class="portfolio-stats" style="background-color: #0030a8;">
                             <div class="stat-item">
                                 <h2 style="color: white;">Downloads:</h4>
-                                <p style="color: white;">1k+</p>
+                                    <p style="color: white;">1k+</p>
                             </div>
                             <div class="stat-item">
                                 <h2 style="color: white;">Rating:</h4>
-                                <p style="color: white;">5/5</p>
+                                    <p style="color: white;">5/5</p>
                             </div>
                         </div>
                         <button class="portfolio-btn">Contact Us</button>
@@ -1715,22 +1728,25 @@
                         <img src="tennis_app.png" alt="TennisPAL App Screenshot">
                     </div>
                 </div>
-                
+
                 <!-- Slide 2 - Nsigma -->
                 <div class="portfolio-slide" style="background-color: #4CAF50;">
                     <div class="portfolio-content">
                         <img src="sigma.png" alt="Nsigma" class="portfolio-logo">
                         <h2 class="portfolio-title" style="color: white;">Empowering Canadian Retailers Online</h2>
-                        <p class="portfolio-description" style="color: white;">Online platform offers a range of services aimed at enhancing the digital presence of retailers. From building intuitive ecommerce platforms to implementing efficient logistics and payment solutions, Nsigma Ecommerce ensures seamless operations for its clients.</p>
-                        
+                        <p class="portfolio-description" style="color: white;">Online platform offers a range of
+                            services aimed at enhancing the digital presence of retailers. From building intuitive
+                            ecommerce platforms to implementing efficient logistics and payment solutions, Nsigma
+                            Ecommerce ensures seamless operations for its clients.</p>
+
                         <div class="portfolio-stats" style="background-color: #4CAF50;">
                             <div class="stat-item">
                                 <h2 style="color: white;">Customers:</h4>
-                                <p style="color: white;">15k+</p>
+                                    <p style="color: white;">15k+</p>
                             </div>
                             <div class="stat-item">
                                 <h2 style="color: white;">Transactions:</h4>
-                                <p style="color: white;">50k+</p>
+                                    <p style="color: white;">50k+</p>
                             </div>
                         </div>
                         <button class="portfolio-btn">Contact Us</button>
@@ -1740,22 +1756,25 @@
                         <img src="tabl_shop.png" alt="Nsigma App Screenshot">
                     </div>
                 </div>
-                
+
                 <!-- Slide 3 - Food Delivery -->
                 <div class="portfolio-slide" style="background-color: #D65A1F;">
                     <div class="portfolio-content">
                         <img src="squfoods.png" alt="Food Delivery" class="portfolio-logo">
                         <h2 class="portfolio-title" style="color: white;">Revolutionizing Food Delivery</h2>
-                        <p class="portfolio-description" style="color: white;">Introducing new food delivery app designed to revolutionise the way people order and enjoy their favourite meals. From browsing menus to tracking deliveries, our app provides a hassle-free experience for users and businesses alike.</p>
-                        
+                        <p class="portfolio-description" style="color: white;">Introducing new food delivery app
+                            designed to revolutionise the way people order and enjoy their favourite meals. From
+                            browsing menus to tracking deliveries, our app provides a hassle-free experience for users
+                            and businesses alike.</p>
+
                         <div class="portfolio-stats" style="background-color: #D65A1F;">
                             <div class="stat-item">
                                 <h2 style="color: white;">Customers:</h4>
-                                <p style="color: white;">5k+</p>
+                                    <p style="color: white;">5k+</p>
                             </div>
                             <div class="stat-item">
                                 <h2 style="color: white;">Transactions:</h4>
-                                <p style="color: white;">50k+</p>
+                                    <p style="color: white;">50k+</p>
                             </div>
                         </div>
                         <button class="portfolio-btn">Contact Us</button>
@@ -1765,31 +1784,38 @@
                         <img src="pizza_tab.png" alt="Food App Screenshot">
                     </div>
                 </div>
-                
+
                 <!-- Slide 4 - Work Reports -->
                 <div class="portfolio-slide" style="background-color:  #388E3C;">
                     <div class="portfolio-content">
-                        <img src="report.png" alt="Work Reports" class="portfolio-logo" style="height: 115px; width: 115px;">
+                        <img src="report.png" alt="Work Reports" class="portfolio-logo"
+                            style="height: 115px; width: 115px;">
                         <h2 class="portfolio-title" style="color: white;">Streamlining Work Reports</h2>
-                        <p class="portfolio-description" style="color: white;">Born out of sheer frustration of work reports and tedious work updates, we decided to sprinkle some tech magic and create a tool that not only streamlines your work reports, but does it with a flair.</p>
-                        
+                        <p class="portfolio-description" style="color: white;">Born out of sheer frustration of work
+                            reports and tedious work updates, we decided to sprinkle some tech magic and create a tool
+                            that not only streamlines your work reports, but does it with a flair.</p>
+
                         <div class="work-report-cta">
                             <button class="portfolio-btn">We Report Work</button>
                             <p style="color: white;">The easiest way to report work</p>
                         </div>
                     </div>
                     <div class="portfolio-images">
-                        <img src="report_work.png" alt="Work Reports App Screenshot" style="height: 550px; width: 550px;">
+                        <img src="report_work.png" alt="Work Reports App Screenshot"
+                            style="height: 550px; width: 550px;">
                     </div>
                 </div>
-                
+
                 <!-- Slide 5 - SnabbLab -->
                 <div class="portfolio-slide" style="background-color: #2980B9;">
                     <div class="portfolio-content">
-                        <img src="snabblab-logo.png" alt="SnabbLab Logo" class="portfolio-logo">
+                        <img src="snabblab_logo.png" alt="SnabbLab Logo" class="portfolio-logo">
                         <h2 class="portfolio-title" style="color: white;">Laboratory Management Solution</h2>
-                        <p class="portfolio-description" style="color: white;">We've developed an application that empowers partner laboratories by enabling phlebotomists to register patients immediately after doorstep sample collection. Moreover, it provides patients direct access to diagnostic data on their devices, enhancing convenience and engagement.</p>
-                        
+                        <p class="portfolio-description" style="color: white;">We've developed an application that
+                            empowers partner laboratories by enabling phlebotomists to register patients immediately
+                            after doorstep sample collection. Moreover, it provides patients direct access to diagnostic
+                            data on their devices, enhancing convenience and engagement.</p>
+
                         <div class="portfolio-stats" style="background-color: #2980B9;">
                             <div class="stat-item">
                                 <h2 style="color: white;">Downloads:</h2>
@@ -1797,7 +1823,7 @@
                             </div>
                             <div class="stat-item">
                                 <h2 style="color: white;">Rating:</h4>
-                                <p style="color: white;">4/5</p>
+                                    <p style="color: white;">4/5</p>
                             </div>
                         </div>
                         <button class="portfolio-btn">Contact Us</button>
@@ -1815,14 +1841,18 @@
 
     <section class="section why-choose-us">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: 'Segoe UI', Roboto, sans-serif;">
+            <div
+                style="text-align: center; max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: 'Segoe UI', Roboto, sans-serif;">
                 <div style="margin-bottom: 16px;">
                     <h3 style="color: #388E3C; font-size: 1rem; font-weight: 600; margin: 0;">💚 WHY CHOOSE US</h3>
                 </div>
                 <div>
-                    <h2 style="font-size: 2rem; color: #001a72; font-weight: 700; margin: 0 0 20px 0; line-height: 1.3;">Why Choose Our Digital <span style="color: #D65A1F;">Solutions</span>?</h2>
+                    <h2
+                        style="font-size: 2rem; color: #001a72; font-weight: 700; margin: 0 0 20px 0; line-height: 1.3;">
+                        Why Choose Our Digital <span style="color: #D65A1F;">Solutions</span>?</h2>
                     <p style="font-size: 1.1rem; color: #555; line-height: 1.6; margin: 0 auto; max-width: 600px;">
-                        We bring the expertise, experience, and efficiency needed to build your tech product—without the risks.
+                        We bring the expertise, experience, and efficiency needed to build your tech product—without the
+                        risks.
                     </p>
                 </div>
             </div>
@@ -1845,7 +1875,8 @@
                     <p>Developing tech solutions without experience leads to costly mistakes.</p>
                     <button class="btn">Get in Touch</button>
                 </div>
-                <div class="reason-card" style="background-image: url('customization-banner.png'); background-size: cover;">
+                <div class="reason-card"
+                    style="background-image: url('customization-banner.png'); background-size: cover;">
                     <img src="forth.png" alt="Custom">
                     <h1>Customize with flexible enjoyment.</h1>
                     <p>Craft an application designed to the unique requirements of your business.</p>
@@ -1857,7 +1888,8 @@
 
     <section class="section process">
         <div class="container">
-            <div class="section-title" style="display: grid; text-align: center; max-width: 600px; margin: 0 auto; padding: 5px 5px;">
+            <div class="section-title"
+                style="display: grid; text-align: center; max-width: 600px; margin: 0 auto; padding: 5px 5px;">
                 <h2>Our Development Process</h2>
                 <p>We follow a proven methodology to ensure quality and efficiency in every project.</p>
             </div>
@@ -1905,8 +1937,10 @@
             <div class="partnership-content">
                 <div class="partnership-text">
                     <h3 style="color:#388E3C;">💼 PARTNERSHIPS</h3>
-                    <h1 style="font-weight: 900; font-size: 50px; color: #001a72;">Driving Innovation Through <span style="color: #D65A1F;">Strategic Collaborations</span></h1>
-                    <p style="font-size: 24px;">At SnabbTech, we believe in the power of partnerships to accelerate growth and deliver
+                    <h1 style="font-weight: 900; font-size: 50px; color: #001a72;">Driving Innovation Through <span
+                            style="color: #D65A1F;">Strategic Collaborations</span></h1>
+                    <p style="font-size: 24px;">At SnabbTech, we believe in the power of partnerships to accelerate
+                        growth and deliver
                         cutting-edge solutions.</p>
                     <button class="btn">Get in Touch</button>
                 </div>
@@ -1925,28 +1959,30 @@
                 </div>
                 <div class="industry-text">
                     <h3 style="color:#388E3C;">🏭 OUR INDUSTRY</h3>
-                    <h1 style="font-weight: 700; font-size: 40px; color: #001a72;">Here are 3 Reasons to Patronize <span style="color: #D65A1F;">SnabbTech</span></h1>
+                    <h1 style="font-weight: 700; font-size: 40px; color: #001a72;">Here are 3 Reasons to Patronize <span
+                            style="color: #D65A1F;">SnabbTech</span></h1>
                     <div class="industry-reasons">
                         <div class="industry-reason">
                             <img src="F.png" alt="Team">
                             <div>
                                 <h2 style="color:#27702a;">Expert In-House Team</h3>
-                                <p>100+ products delivered by our experienced tech, project management, and QA experts.
-                                </p>
+                                    <p>100+ products delivered by our experienced tech, project management, and QA
+                                        experts.
+                                    </p>
                             </div>
                         </div>
                         <div class="industry-reason">
                             <img src="G.png" alt="Cost Effective">
                             <div>
                                 <h2 style="color:#27702a;">Cost-Efficient Solution</h3>
-                                <p>40-50% lower cost vs building an in-house team.</p>
+                                    <p>40-50% lower cost vs building an in-house team.</p>
                             </div>
                         </div>
                         <div class="industry-reason">
                             <img src="H.png" alt="Fast">
                             <div>
                                 <h2 style="color:#27702a;">Faster Execution, Zero Compliance Hassle</h3>
-                                <p>Scale up/down quickly without HR and compliance overheads.</p>
+                                    <p>Scale up/down quickly without HR and compliance overheads.</p>
                             </div>
                         </div>
                     </div>
@@ -1957,7 +1993,8 @@
 
     <section class="section solutions">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto; padding: 5px; font-family: 'Segoe UI', Roboto, sans-serif;">
+            <div
+                style="text-align: center; max-width: 800px; margin: 0 auto; padding: 5px; font-family: 'Segoe UI', Roboto, sans-serif;">
                 <h1 style="color: #374c92; font-size: 2.8rem; font-weight: 800; margin-bottom: 0; line-height: 1.5;">
                     Unique Solutions <span style="color: #D65A1F;">SnabbTech offers</span>
                 </h1>
@@ -1987,8 +2024,10 @@
 
     <section class="section services-list">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 10px auto 0; padding: 10px; font-family: 'Segoe UI', Roboto, sans-serif;">
-                <h1 style="color: #001a72; font-size: 2.5rem; font-weight: 700; margin-bottom: 0; line-height: 1.3;">Best <span style="color: #D65A1F;">Solutions</span></h1>
+            <div
+                style="text-align: center; max-width: 800px; margin: 10px auto 0; padding: 10px; font-family: 'Segoe UI', Roboto, sans-serif;">
+                <h1 style="color: #001a72; font-size: 2.5rem; font-weight: 700; margin-bottom: 0; line-height: 1.3;">
+                    Best <span style="color: #D65A1F;">Solutions</span></h1>
                 <p style="color: #333; font-size: 1.1rem; font-weight: 400; margin-top: 15px; line-height: 1.6;">
                     Continuous iteration and adaptation based on feedback for optimal problem-solving.
                 </p>
@@ -2041,9 +2080,12 @@
     <section class="testimonials">
         <div class="testimonial-container">
             <div class="testimonial-text">
-                <h2 style="color: #001a72; font-size: 40px; font-weight: 700;">What our <span style="color: #ee7238;">clients</span> say about us.</h2>
-                <p style="color: black; font-size: 20px; font-weight: 300;" >Aliquam tristique libero at dui sodales, et placerat orci lobortis. Donec metus lorem, vulputate at
-                    sapien.<p>
+                <h2 style="color: #001a72; font-size: 40px; font-weight: 700;">What our <span
+                        style="color: #ee7238;">clients</span> say about us.</h2>
+                <p style="color: black; font-size: 20px; font-weight: 300;">Aliquam tristique libero at dui sodales, et
+                    placerat orci lobortis. Donec metus lorem, vulputate at
+                    sapien.
+                <p>
             </div>
             <div class="testimonial-images">
                 <img src="Feedback_1.png" alt="Client testimonial">
@@ -2091,36 +2133,38 @@
     </section>
 
     <section class="contact-section" style="background-color: #003366;">
-        <div class="contact-container"  style="margin: 0 10px;">
-            <div class="contact-text" >
+        <div class="contact-container" style="margin: 0 10px;">
+            <div class="contact-text">
                 <h1 style="color: white; font-size: 50px; font-weight: 600;">Get in Touch</h1>
-                <p style="color: white; font-size: 24px; font-weight: 300;">Have something to share or inquire about? We're here to listen. Use the form below to send us a
+                <p style="color: white; font-size: 24px; font-weight: 300;">Have something to share or inquire about?
+                    We're here to listen. Use the form below to send us a
                     message, and we'll be sure to get back to you promptly. Whether you have questions, feedback, or
                     just want to connect, we're eager to hear from you. Your input matters to us, and we're dedicated to
                     providing you with the support and assistance you need. Let's start the conversation!</p>
             </div>
-            <div class="contact-form" style="max-width: 500px; margin: 0 auto; padding: 20px; font-family: 'Segoe UI', Roboto, sans-serif;">
-                <form action="https://getform.io/f/662986cf-6b40-4f07-9c7a-0ffa3da953af" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-                    <input type="text" name="Name" placeholder="Enter your Name..." required 
-                           style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
-                    
-                    <input type="email" name="Email" placeholder="Enter your Email..." required 
-                           style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
-                    
-                    <input type="tel" name="phone" placeholder="Phone" required 
-                           style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
-                    
-                    <textarea name="Message" placeholder="How can we help you?" required 
-                              style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; min-height: 100px; resize: vertical;"></textarea>
-                    
+            <div class="contact-form"
+                style="max-width: 500px; margin: 0 auto; padding: 20px; font-family: 'Segoe UI', Roboto, sans-serif;">
+                <form action="https://getform.io/f/662986cf-6b40-4f07-9c7a-0ffa3da953af" method="POST"
+                    style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" name="Name" placeholder="Enter your Name..." required
+                        style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+
+                    <input type="email" name="Email" placeholder="Enter your Email..." required
+                        style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+
+                    <input type="tel" name="phone" placeholder="Phone" required
+                        style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+
+                    <textarea name="Message" placeholder="How can we help you?" required
+                        style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; min-height: 100px; resize: vertical;"></textarea>
+
                     <div style="display: flex; align-items: center; gap: 8px; margin: 5px 0 15px 0;">
-                        <input type="checkbox" id="robotCheck" required 
-                               style="width: 16px; height: 16px;">
+                        <input type="checkbox" id="robotCheck" required style="width: 16px; height: 16px;">
                         <label for="robotCheck" style="font-size: 14px; color: #555;">I'm not a robot</label>
                     </div>
-                    
-                    <button type="submit" 
-                            style="padding: 12px 25px; background-color: #4CAF50; color: white; font-weight: 500; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">
+
+                    <button type="submit"
+                        style="padding: 12px 25px; background-color: #4CAF50; color: white; font-weight: 500; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">
                         Submit
                     </button>
                 </form>
@@ -2130,11 +2174,11 @@
 
     <section class="reviews">
         <div class="reviews-container">
-            <h4>SnabbTech Reviews  ☆ ☆ ☆ ☆ ☆</h4>
+            <h4>SnabbTech Reviews ☆ ☆ ☆ ☆ ☆</h4>
             <div class="review-logos">
                 <img src="reviews (1).png" style="height: 200px; width: 200px;" alt="Trustpilot">
                 <img src="reviews (2).png" style="height: 200px; width: 200px;" alt="Clutch">
-                <img src="reviews (3).png" style="height: 200px; width: 200px;"alt="Google Reviews">
+                <img src="reviews (3).png" style="height: 200px; width: 200px;" alt="Google Reviews">
             </div>
             <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
                 <img src="review 4 (1).png" style="max-width: 100%; height: auto;">
@@ -2145,7 +2189,7 @@
     <footer>
         <div class="footer-content" style="margin: 50px;">
             <div class="footer-links">
-                <img src="Snabbtech_logo.png">
+                <img src="Snabbtech_logo.png"><br>
                 <h3>Contact</h3>
                 <ul>
                     <li><a href="mailto:ashish@snabbtech.com">ashish@snabbtech.com</a></li>
@@ -2181,7 +2225,7 @@
                 <h3>Our Newsletter</h3>
                 <form>
                     <input type="email" placeholder="Email..." required>
-                    <button type="submit">Send</button>
+                    <button type="submit" style="padding: 10px; background-color: #388E3C; color: white;">Send</button>
                 </form>
                 <p>Stay informed, inspired, and engaged with our curated newsletter, delivering the latest trends,
                     insightful articles, and practical tips straight to your inbox.</p>
