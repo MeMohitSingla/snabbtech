@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnabbTech - Software Development & IT Consulting Services Provider</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #7dbd34;
+            --primary-dark: #6ca82d;
+            --secondary-color: #7ed6a5;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --text-color: #555;
+            --heading-color: #222;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray-medium: #e0e0e0;
+            --gray-dark: #777;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--heading-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ============ Utility Classes ============ */
+        .text-center {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            font-size: 1rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 1rem;
+        }
+
+        .title-left {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .title-right {
+            flex: 1.2;
+            min-width: 300px;
+        }
+
+        .title-left h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #001a72;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .highlight-orange {
+            color: orangered;
+        }
+
+        .highlight-blue {
+            color: #001a72;
+        }
+
+        .title-right p {
+            font-size: 1.125rem;
+            color: #333;
+            font-weight: 500;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .section-subtitle {
+            display: block;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* ============ Header & Navigation ============ */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 0.5rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+        }
+
+        .logo img {
+            height: 2.5rem;
+            transition: var(--transition);
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .menu {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .menu a {
+            font-weight: 500;
+            font-size: 0.9375rem;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .menu a:hover::after,
+        .menu a.active::after {
+            width: 100%;
+        }
+
+        .menu a.active {
+            color: var(--primary-color);
+        }
+
+        .menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cta-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ============ Hero Section ============ */
+        .hero {
+            background-color: var(--gray-light);
+            padding: 10rem 0 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-image: url("main_pic.jpg");
+            background-size: cover;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(125, 189, 52, 0.1) 0%, rgba(126, 214, 165, 0.1) 100%);
+            z-index: 0;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h3 {
+            font-size: 1.25rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============ Services Section ============ */
+        .services {
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background-color: var(--gray-light);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--gray-medium);
+        }
+
+        .service-card:hover {
+            transform: translateY(-0.625rem);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .service-card img {
+            height: 3.75rem;
+            margin-bottom: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .service-card h2 {
+            font-size: 1.375rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1rem;
+            color: var(--text-color);
+            font-weight: 400;
+        }
+
+        /* ============ Portfolio Section ============ */
+
+        .portfolio-sec {
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            margin-left: 0;
+        }
+
+        .portfolio-head {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .portfolio-head img {
+            height: 24px;
+            width: 24px;
+        }
+
+        .portfolio-lab {
+            color: #6ca82d;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .portfolio-tit {
+            font-size: 2rem;
+            color: #003366;
+            font-weight: 700;
+            margin: 0 0 0.75rem 0;
+        }
+
+        .portfolio-tit .high {
+            color: orangered;
+        }
+
+        .portfolio-descr {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Portfolio Section Styles */
+        .portfolio-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .portfolio-slider-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 60px;
+            overflow: hidden; /* Add this to contain the slider */
+    width: 100%; /* Ensure it doesn't exceed viewport */
+    box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        .portfolio-slider {
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-slide {
+            min-width: 100%;
+            display: flex;
+            padding: 40px;
+            box-sizing: border-box;
+            transition: all 0.5s ease;
+            opacity: 0;
+            transform: translateX(100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .portfolio-slide.active {
+            opacity: 1;
+            transform: translateX(0);
+            position: relative;
+        }
+
+        .portfolio-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .portfolio-logo {
+            max-width: 180px;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-title {
+            font-size: 32px;
+            color: #001a33;
+            margin-bottom: 20px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .portfolio-description {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-apps {
+            margin-bottom: 30px;
+        }
+
+        .portfolio-apps h3 {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .app-badges {
+            display: flex;
+            gap: 15px;
+        }
+
+        .app-badges img {
+            height: 40px;
+            border-radius: 7px;
+            transition: transform 0.3s;
+        }
+
+        .app-badges img:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-stats {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            background: #f5f7ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .stat-item p {
+            font-size: 24px;
+            font-weight: 700;
+            color: #001a33;
+            margin: 0;
+        }
+
+        .portfolio-btn {
+            background-color: #001a33;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            align-self: flex-start;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .portfolio-btn:hover {
+            background-color: #003366;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 26, 51, 0.3);
+        }
+
+        .portfolio-images {
+            flex: 1;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio-images img {
+            width: calc(50% - 10px);
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-images img:hover {
+            transform: scale(1.03);
+        }
+
+        .portfolio-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: #001a33;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .portfolio-arrow:hover {
+            background-color: #003366;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .portfolio-prev {
+            left: 0;
+        }
+
+        .portfolio-next {
+            right: 0;
+        }
+
+        .portfolio-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .portfolio-dots button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .portfolio-dots button.active {
+            background-color: #001a33;
+            transform: scale(1.3);
+        }
+
+        /* Food Menu Styles */
+        .food-menu {
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .menu-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .menu-item h3 {
+            color: #001a33;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .menu-item h4 {
+            color: #001a33;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .menu-item p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .menu-btn {
+            background-color: #001a33;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            font-size: 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .menu-note {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        /* Work Report CTA Styles */
+        .work-report-cta {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .work-report-cta p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .portfolio-slide {
+                flex-direction: column;
+                padding: 30px;
+            }
+
+            .portfolio-images {
+                margin-top: 30px;
+                flex-direction: row;
+            }
+
+            .portfolio-images img {
+                width: calc(50% - 10px);
+                margin-bottom: 0;
+            }
+
+            .portfolio-title {
+                font-size: 28px;
+            }
+
+            .portfolio-btn {
+                align-self: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-slider-container {
+                padding: 0 40px;
+            }
+
+            .portfolio-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .portfolio-stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .portfolio-images {
+                flex-direction: column;
+            }
+
+            .portfolio-images img {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .portfolio-section {
+                padding: 60px 15px;
+            }
+
+            .portfolio-slider-container {
+                padding: 0 30px;
+            }
+
+            .portfolio-slide {
+                padding: 20px;
+            }
+
+            .portfolio-title {
+                font-size: 24px;
+            }
+
+            .portfolio-description {
+                font-size: 15px;
+            }
+
+            .app-badges {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+
+        /* ============ Why Choose Us Section ============ */
+        .why-choose-us {
+            background-color: var(--white);
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .reason-card {
+            background-color: var(--gray-light);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--gray-medium);
+        }
+
+        .reason-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+
+        .reason-card img {
+            height: 3.75rem;
+            margin-bottom: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .reason-card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .reason-card p {
+            font-size: 0.9375rem;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
+
+        /* ============ Process Section ============ */
+        .process {
+            background-color: #7ECF91;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem 1.25rem;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+        }
+
+        .process-step:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-md);
+        }
+
+        .process-step img {
+            height: 3.75rem;
+            margin-bottom: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .process-step h5 {
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-step p {
+            font-size: 0.875rem;
+            color: var(--text-color);
+        }
+
+        .process-arrow {
+            display: none;
+        }
+
+        /* ============ Partnerships Section ============ */
+        .partnerships {
+            background-color: var(--white);
+        }
+
+        .partnership-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .partnership-text {
+            flex: 1;
+        }
+
+        .partnership-image {
+            flex: 1;
+            text-align: center;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .partnership-image img {
+            transition: var(--transition);
+        }
+
+        .partnership-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ============ Industry Section ============ */
+        .industry {
+            background-color: var(--gray-light);
+        }
+
+        .industry-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .industry-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .industry-image img {
+            transition: var(--transition);
+        }
+
+        .industry-image:hover img {
+            transform: scale(1.02);
+        }
+
+        .industry-text {
+            flex: 1;
+        }
+
+        .industry-reasons {
+            margin-top: 2rem;
+        }
+
+        .industry-reason {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .industry-reason img {
+            width: 2.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .industry-reason h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .industry-reason p {
+            font-size: 0.9375rem;
+        }
+
+        /* ============ Solutions Section ============ */
+        .solutions {
+            background-color: var(--white);
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .solution-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            background-color: var(--gray-light);
+            transition: var(--transition);
+            border: 1px solid var(--gray-medium);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+
+        .solution-card img {
+            height: 3.75rem;
+            margin-bottom: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .solution-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .solution-card p {
+            font-size: 0.9375rem;
+        }
+
+        /* ============ Services List Section ============ */
+        .services-list {
+            background-color: var(--gray-light);
+        }
+
+        .services-grid-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .service-item:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-item img {
+            height: 5rem;
+            margin-bottom: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .service-item h3 {
+            font-size: 1.125rem;
+        }
+
+        /* ============ Testimonials Section ============ */
+        .testimonials {
+            background-color: var(--white);
+            padding: 5rem 0;
+        
+        }
+
+        .testimonial-container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .testimonial-text {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .testimonial-text h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .testimonial-text h3 {
+            font-size: 1.125rem;
+            color: var(--text-color);
+            font-weight: 400;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-images {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .testimonial-images img {
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .testimonial-images img:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ============ Blog Section ============ */
+        .blog {
+            background-color: var(--gray-light);
+            padding: 5rem 0;
+        }
+
+        .blog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .blog-header h2 {
+            font-size: 2.25rem;
+        }
+
+        .blog-header a {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-header a:hover {
+            color: var(--primary-dark);
+        }
+
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-post {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .blog-post:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-md);
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 12.5rem;
+            object-fit: cover;
+        }
+
+        .blog-post-content {
+            padding: 1.25rem;
+        }
+
+        .blog-post-meta {
+            font-size: 0.875rem;
+            color: var(--gray-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-post h3 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-post .btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        /* ============ Contact Section ============ */
+        .contact-section {
+            background-color: var(--white);
+            padding: 5rem 0;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-text h1 {
+            font-size: 2.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-text p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .forms {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1.25rem;
+            border: 1px solid var(--gray-medium);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .forms:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(125, 189, 52, 0.2);
+        }
+
+        textarea.forms {
+            min-height: 7.5rem;
+            resize: vertical;
+        }
+
+
+
+        /* ============ Reviews Section ============ */
+        .reviews {
+            background-color: var(--gray-light);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .reviews h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .review-logos {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .review-logos img {
+            height: 2.5rem;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .review-logos img:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        /* ============ Footer ============ */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo img {
+            height: 3.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-links h3 {
+            color: var(--white);
+            font-size: 1.125rem;
+            margin-bottom: 1.25rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 2.5rem;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-links ul {
+            margin-top: 1rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            transition: var(--transition);
+            font-size: 0.9375rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 0.25rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+
+        .social-links a {
+            color: var(--white);
+            background-color: #444;
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-0.25rem);
+        }
+
+        .newsletter input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 0.9375rem;
+        }
+
+        .newsletter button {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
+            font-size: 0.875rem;
+            color: #bbb;
+            margin-top: 1rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            font-size: 0.875rem;
+            color: #bbb;
+        }
+
+        /* ============ Popup Form ============ */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .popup-content {
+            background-color: var(--white);
+            padding: 2.5rem;
+            width: 90%;
+            max-width: 500px;
+            border-radius: var(--border-radius);
+            position: relative;
+            box-shadow: var(--shadow-lg);
+            animation: slideUp 0.4s ease;
+        }
+
+        .popup-content h2 {
+            margin-top: 0;
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.3;
+        }
+
+        .popup-content input,
+        .popup-content textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--gray-medium);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .popup-content input:focus,
+        .popup-content textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(125, 189, 52, 0.2);
+        }
+
+        .popup-content textarea {
+            min-height: 7.5rem;
+        }
+
+        .popup-content button.submit {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: var(--transition);
+        }
+
+        .popup-content button.submit:hover {
+            background: var(--primary-dark);
+        }
+
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray-dark);
+            transition: var(--transition);
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .close:hover {
+            color: var(--dark-color);
+            background-color: var(--gray-light);
+        }
+
+        
+        /* ============ Animations ============ */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============ Responsive Styles ============ */
+        @media (max-width: 992px) {
+            .section {
+                padding: 4rem 0;
+            }
+
+            .hero {
+                padding: 8rem 0 4rem;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.875rem;
+            }
+
+            .portfolio-item,
+            .partnership-content,
+            .industry-content,
+            .testimonial-container,
+            .contact-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .portfolio-image {
+                order: -1;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .process-step {
+                margin-bottom: 1rem;
+            }
+
+            .process-arrow {
+                display: block;
+                margin: 1rem auto;
+                transform: rotate(90deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 0;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h3 {
+                font-size: 1.125rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.75rem;
+            }
+
+            .blog-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .services-grid-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 3rem 0;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-images {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-links {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="https://snabbtech.com/"><img src="snabbtech_logo.png" alt="SnabbTech Logo"></a>
+                </div>
+                <div class="menu">
+                    <a href="https://snabbtech.com/" class="active">Home</a>
+                    <a href="https://snabbtech.com/about-us/">About</a>
+                    <a href="https://snabbtech.com/software-development-services/">Services</a>
+                    <a href="https://snabbtech.com/industry/">Industry</a>
+                    <a href="https://snabbtech.com/portfolio/">Portfolio</a>
+                    <a href="https://snabbtech.com/partnership/">Partnership</a>
+                    <a href="https://snabbtech.com/blog-news/">Blog</a>
+                    <a href="https://snabbtech.com/contact-us/">Contact Us</a>
+                </div>
+                <button class="cta-button" onclick="openPopup()">Get in Touch</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div>
+                <h1 style="padding-top: 100px; display: grid;   margin-left: 600px ;">Your Trusted Tech Partner in <span
+                        style="color: orangered;">Product Engineering.</span></h1>
+                <h3 style="  margin-left: 600px ;">Bespoke Web, App, and Custom GenAI Development—from Concept to
+                    Scalable, Secure, and High-Performance Solutions.</h3>
+                <button style="  margin-left: 600px ;" class="btn">Get in Touch</button>
+            </div>
+            <div>
+                <img>
+            </div>
+        </div>
+    </section>
+
+    <section class="section services">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-left">
+                    <h2>
+                        Discover the <span class="highlight-orange">Latest Innovations</span> at <span
+                            class="highlight-blue">SnabbTech</span>
+                    </h2>
+                </div>
+                <div class="title-right">
+                    <p>
+                        Stay ahead with cutting-edge solutions in AI, product engineering, and custom development.
+                        From scalable SaaS platforms to GenAI-powered automation, we're building the future of
+                        tech—efficient,
+                        secure, and ready to scale.
+                    </p>
+                </div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="mobile.png" alt="Custom Software">
+                    <h2>Custom Software Development</h2>
+                    <h3>Web & mobile applications tailored to business needs.</h3>
+                </div>
+                <div class="service-card">
+                    <img src="icon2.png" alt="AI">
+                    <h2>Generative AI Development</h2>
+                    <h3>AI-powered solutions for automation and innovation.</h3>
+                </div>
+                <div class="service-card">
+                    <img src="pen-pencil.png" alt="Product Engineering">
+                    <h2>Product Engineering & Consultation</h2>
+                    <h3>Expert guidance on how to build, what to build, and how to scale.</h3>
+                </div>
+                <div class="service-card">
+                    <img src="pie_chart.png" alt="Growth">
+                    <h2>Growth and Description</h2>
+                    <h3>We help startups and SMEs turn ideas into scalable digital products—cost-effectively.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-sec">
+        <div class="portfolio-head">
+            <img src="portfolio.png" alt="Portfolio Icon">
+            <span class="portfolio-lab">PORTFOLIO</span>
+        </div>
+
+        <h1 class="portfolio-tit">
+            The Successfully <span class="high">Snabb</span> Businesses
+        </h1>
+
+        <p class="portfolio-descr">
+            We take pride in catering their growing business needs and making them stand apart on the App Store & Google
+            Play.
+        </p>
+    </section>
+
+    <section class="portfolio-section">
+        <div class="portfolio-slider-container">
+            <button class="portfolio-arrow portfolio-prev">&lt;</button>
+            <div class="portfolio-slider">
+                <!-- Slide 1 - TennisPAL -->
+                <div class="portfolio-slide active" style="background-color: #0030a8;">
+                    <div class="portfolio-content" style="background-color: #0030a8;">
+                        <img src="tennispal.png" alt="TennisPAL" class="portfolio-logo">
+                        <p class="portfolio-description" style="color: white;">TennisPAL is a community where you can find and connect with other like-minded tennis players using the app. Use TennisPAL to find your next tennis partner, share your favourite moments, discover a new tennis court, and more. Meet, play, share, and learn tennis, anytime, anywhere!</p>
+                        <div class="portfolio-apps">
+                            <h3 style="color: white;">Available on:</h3>
+                            <div class="app-badges">
+                                <a href="https://apps.apple.com/in/app/tennispal-find-players-nearby/id1119279287">
+                                    <img src="store1.png" alt="App Store">
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.sagedom.tennispal&hl=en">
+                                    <img src="store2.png" alt="Play Store">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-stats" style="background-color: #0030a8;">
+                            <div class="stat-item">
+                                <h2 style="color: white;">Downloads:</h4>
+                                <p style="color: white;">1k+</p>
+                            </div>
+                            <div class="stat-item">
+                                <h2 style="color: white;">Rating:</h4>
+                                <p style="color: white;">5/5</p>
+                            </div>
+                        </div>
+                        <button class="portfolio-btn">Contact Us</button>
+                    </div>
+                    <div class="portfolio-images">
+                        <img src="tennis_shot.png" alt="TennisPAL App Screenshot">
+                        <img src="tennis_app.png" alt="TennisPAL App Screenshot">
+                    </div>
+                </div>
+                
+                <!-- Slide 2 - Nsigma -->
+                <div class="portfolio-slide" style="background-color: #4CAF50;">
+                    <div class="portfolio-content">
+                        <img src="sigma.png" alt="Nsigma" class="portfolio-logo">
+                        <h2 class="portfolio-title" style="color: white;">Empowering Canadian Retailers Online</h2>
+                        <p class="portfolio-description" style="color: white;">Online platform offers a range of services aimed at enhancing the digital presence of retailers. From building intuitive ecommerce platforms to implementing efficient logistics and payment solutions, Nsigma Ecommerce ensures seamless operations for its clients.</p>
+                        
+                        <div class="portfolio-stats" style="background-color: #4CAF50;">
+                            <div class="stat-item">
+                                <h2 style="color: white;">Customers:</h4>
+                                <p style="color: white;">15k+</p>
+                            </div>
+                            <div class="stat-item">
+                                <h2 style="color: white;">Transactions:</h4>
+                                <p style="color: white;">50k+</p>
+                            </div>
+                        </div>
+                        <button class="portfolio-btn">Contact Us</button>
+                    </div>
+                    <div class="portfolio-images">
+                        <img src="shopping.png" alt="Nsigma App Screenshot">
+                        <img src="tabl_shop.png" alt="Nsigma App Screenshot">
+                    </div>
+                </div>
+                
+                <!-- Slide 3 - Food Delivery -->
+                <div class="portfolio-slide" style="background-color: #D65A1F;">
+                    <div class="portfolio-content">
+                        <img src="squfoods.png" alt="Food Delivery" class="portfolio-logo">
+                        <h2 class="portfolio-title" style="color: white;">Revolutionizing Food Delivery</h2>
+                        <p class="portfolio-description" style="color: white;">Introducing new food delivery app designed to revolutionise the way people order and enjoy their favourite meals. From browsing menus to tracking deliveries, our app provides a hassle-free experience for users and businesses alike.</p>
+                        
+                        <div class="portfolio-stats" style="background-color: #D65A1F;">
+                            <div class="stat-item">
+                                <h2 style="color: white;">Customers:</h4>
+                                <p style="color: white;">5k+</p>
+                            </div>
+                            <div class="stat-item">
+                                <h2 style="color: white;">Transactions:</h4>
+                                <p style="color: white;">50k+</p>
+                            </div>
+                        </div>
+                        <button class="portfolio-btn">Contact Us</button>
+                    </div>
+                    <div class="portfolio-images">
+                        <img src="food_delivery.png" alt="Food App Screenshot">
+                        <img src="pizza_tab.png" alt="Food App Screenshot">
+                    </div>
+                </div>
+                
+                <!-- Slide 4 - Work Reports -->
+                <div class="portfolio-slide" style="background-color:  #388E3C;">
+                    <div class="portfolio-content">
+                        <img src="report.png" alt="Work Reports" class="portfolio-logo" style="height: 115px; width: 115px;">
+                        <h2 class="portfolio-title" style="color: white;">Streamlining Work Reports</h2>
+                        <p class="portfolio-description" style="color: white;">Born out of sheer frustration of work reports and tedious work updates, we decided to sprinkle some tech magic and create a tool that not only streamlines your work reports, but does it with a flair.</p>
+                        
+                        <div class="work-report-cta">
+                            <button class="portfolio-btn">We Report Work</button>
+                            <p style="color: white;">The easiest way to report work</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-images">
+                        <img src="report_work.png" alt="Work Reports App Screenshot" style="height: 550px; width: 550px;">
+                    </div>
+                </div>
+                
+                <!-- Slide 5 - SnabbLab -->
+                <div class="portfolio-slide" style="background-color: #2980B9;">
+                    <div class="portfolio-content">
+                        <img src="snabblab-logo.png" alt="SnabbLab Logo" class="portfolio-logo">
+                        <h2 class="portfolio-title" style="color: white;">Laboratory Management Solution</h2>
+                        <p class="portfolio-description" style="color: white;">We've developed an application that empowers partner laboratories by enabling phlebotomists to register patients immediately after doorstep sample collection. Moreover, it provides patients direct access to diagnostic data on their devices, enhancing convenience and engagement.</p>
+                        
+                        <div class="portfolio-stats" style="background-color: #2980B9;">
+                            <div class="stat-item">
+                                <h2 style="color: white;">Downloads:</h2>
+                                <p style="color: white;">20k+</p>
+                            </div>
+                            <div class="stat-item">
+                                <h2 style="color: white;">Rating:</h4>
+                                <p style="color: white;">4/5</p>
+                            </div>
+                        </div>
+                        <button class="portfolio-btn">Contact Us</button>
+                    </div>
+                    <div class="portfolio-images">
+                        <img src="snabb_tab.png" alt="SnabbLab App Screenshot">
+                        <img src="lab-work.png" alt="SnabbLab App Screenshot">
+                    </div>
+                </div>
+            </div>
+            <button class="portfolio-arrow portfolio-next">&gt;</button>
+        </div>
+        <div class="portfolio-dots"></div>
+    </section>
+
+    <section class="section why-choose-us">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: 'Segoe UI', Roboto, sans-serif;">
+                <div style="margin-bottom: 16px;">
+                    <h3 style="color: #388E3C; font-size: 1rem; font-weight: 600; margin: 0;">💚 WHY CHOOSE US</h3>
+                </div>
+                <div>
+                    <h2 style="font-size: 2rem; color: #001a72; font-weight: 700; margin: 0 0 20px 0; line-height: 1.3;">Why Choose Our Digital <span style="color: #D65A1F;">Solutions</span>?</h2>
+                    <p style="font-size: 1.1rem; color: #555; line-height: 1.6; margin: 0 auto; max-width: 600px;">
+                        We bring the expertise, experience, and efficiency needed to build your tech product—without the risks.
+                    </p>
+                </div>
+            </div>
+            <div class="reasons-grid" style="display: grid; grid-template-columns: repeat(2, 1fr);">
+                <div class="reason-card" style="background-image: url('chip.jpg'); background-size: cover;">
+                    <img src="one.png" alt="Expertise">
+                    <h1>Lack of In-House Tech Expertise</h1>
+                    <p>Businesses struggle to build and maintain a custom tech team.</p>
+                    <button class="btn">Get in Touch</button>
+                </div>
+                <div class="reason-card" style="background-image: url('linegraph.png'); background-size: cover;">
+                    <img src="second.png" alt="Cost">
+                    <h1>High Cost & Complexity</h1>
+                    <p>Hiring, training, and managing developers takes time and resources.</p>
+                    <button class="btn">Get in Touch</button>
+                </div>
+                <div class="reason-card" style="background-image: url('scale.jpg'); background-size: cover;">
+                    <img src="third.png" alt="Risk">
+                    <h1>Trial & Error Risks</h1>
+                    <p>Developing tech solutions without experience leads to costly mistakes.</p>
+                    <button class="btn">Get in Touch</button>
+                </div>
+                <div class="reason-card" style="background-image: url('customization-banner.png'); background-size: cover;">
+                    <img src="forth.png" alt="Custom">
+                    <h1>Customize with flexible enjoyment.</h1>
+                    <p>Craft an application designed to the unique requirements of your business.</p>
+                    <button class="btn">Get in Touch</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section process">
+        <div class="container">
+            <div class="section-title" style="display: grid; text-align: center; max-width: 600px; margin: 0 auto; padding: 5px 5px;">
+                <h2>Our Development Process</h2>
+                <p>We follow a proven methodology to ensure quality and efficiency in every project.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <img src="A.png" alt="Planning">
+                    <h5>Planning</h5>
+                    <p>Planning is the strategic roadmap that transforms dreams into reality, guiding actions with
+                        foresight and purpose.</p>
+                    <img src="Arrow_B.png" alt="Arrow" class="process-arrow">
+                </div>
+                <div class="process-step">
+                    <img src="B.png" alt="Design">
+                    <h5>Design</h5>
+                    <p>Design is the fusion of creativity and functionality, crafting elegant solutions to complex
+                        problems with innovation and intentionality.</p>
+                    <img src="Arrow_A.png" alt="Arrow" class="process-arrow">
+                </div>
+                <div class="process-step">
+                    <img src="C.png" alt="Development">
+                    <h5>Development</h5>
+                    <p>Development is the ongoing process of growth and refinement, nurturing potential into tangible
+                        progress through dedication.</p>
+                    <img src="arrow-icon.png" alt="Arrow" class="process-arrow">
+                </div>
+                <div class="process-step">
+                    <img src="D.png" alt="Testing">
+                    <h5>Test</h5>
+                    <p>Testing is the critical examination of systems and ideas, ensuring quality, reliability, and
+                        effectiveness.</p>
+                    <img src="arrow-icon.png" alt="Arrow" class="process-arrow">
+                </div>
+                <div class="process-step">
+                    <img src="E.png" alt="Launch">
+                    <h5>Launch</h5>
+                    <p>Launch is the culmination of meticulous preparation and unwavering determination, marking the
+                        beginning of a journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section partnerships" style="background-color: #F2F2F2;">
+        <div class="container">
+            <div class="partnership-content">
+                <div class="partnership-text">
+                    <h3 style="color:#388E3C;">💼 PARTNERSHIPS</h3>
+                    <h1 style="font-weight: 900; font-size: 50px; color: #001a72;">Driving Innovation Through <span style="color: #D65A1F;">Strategic Collaborations</span></h1>
+                    <p style="font-size: 24px;">At SnabbTech, we believe in the power of partnerships to accelerate growth and deliver
+                        cutting-edge solutions.</p>
+                    <button class="btn">Get in Touch</button>
+                </div>
+                <div class="partnership-image">
+                    <img src="Partnerships.png" alt="Partnership">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section industry">
+        <div class="container">
+            <div class="industry-content">
+                <div class="industry-image">
+                    <img src="meeting.jpg" alt="Conference">
+                </div>
+                <div class="industry-text">
+                    <h3 style="color:#388E3C;">🏭 OUR INDUSTRY</h3>
+                    <h1 style="font-weight: 700; font-size: 40px; color: #001a72;">Here are 3 Reasons to Patronize <span style="color: #D65A1F;">SnabbTech</span></h1>
+                    <div class="industry-reasons">
+                        <div class="industry-reason">
+                            <img src="F.png" alt="Team">
+                            <div>
+                                <h2 style="color:#27702a;">Expert In-House Team</h3>
+                                <p>100+ products delivered by our experienced tech, project management, and QA experts.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="industry-reason">
+                            <img src="G.png" alt="Cost Effective">
+                            <div>
+                                <h2 style="color:#27702a;">Cost-Efficient Solution</h3>
+                                <p>40-50% lower cost vs building an in-house team.</p>
+                            </div>
+                        </div>
+                        <div class="industry-reason">
+                            <img src="H.png" alt="Fast">
+                            <div>
+                                <h2 style="color:#27702a;">Faster Execution, Zero Compliance Hassle</h3>
+                                <p>Scale up/down quickly without HR and compliance overheads.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section solutions">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto; padding: 5px; font-family: 'Segoe UI', Roboto, sans-serif;">
+                <h1 style="color: #374c92; font-size: 2.8rem; font-weight: 800; margin-bottom: 0; line-height: 1.5;">
+                    Unique Solutions <span style="color: #D65A1F;">SnabbTech offers</span>
+                </h1>
+                <h2 style="color: black; font-size: 1.2rem; font-weight: 350; margin-top: 10px;">
+                    Beyond Development: End-to-End Product Success
+                </h2>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <img src="mobile.png" alt="Consulting">
+                    <h2 style="color: #27702a;">In-Depth Consulting</h2>
+                    <p>Accurate scoping to crystallize the right product roadmap.</p>
+                </div>
+                <div class="solution-card">
+                    <img src="icon2.png" alt="Bug Free">
+                    <h2 style="color: #27702a;">Bug-Free Guarantee</h2>
+                    <p>Free 90-day support to ensure seamless deployment.</p>
+                </div>
+                <div class="solution-card">
+                    <img src="pen-pencil.png" alt="Quality">
+                    <h2 style="color: #27702a;">Industry-Standard Quality Audits</h2>
+                    <p>Every product meets performance, security, and scalability benchmarks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section services-list">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 10px auto 0; padding: 10px; font-family: 'Segoe UI', Roboto, sans-serif;">
+                <h1 style="color: #001a72; font-size: 2.5rem; font-weight: 700; margin-bottom: 0; line-height: 1.3;">Best <span style="color: #D65A1F;">Solutions</span></h1>
+                <p style="color: #333; font-size: 1.1rem; font-weight: 400; margin-top: 15px; line-height: 1.6;">
+                    Continuous iteration and adaptation based on feedback for optimal problem-solving.
+                </p>
+            </div>
+            <div class="services-grid-list">
+                <div class="service-item">
+                    <img src="Food Delivery.png" alt="Delivery">
+                    <h3>Food Delivery</h3>
+                </div>
+                <div class="service-item">
+                    <img src="Grocery Delivery.png" alt="Grocery Delivery">
+                    <h3>Grocery Delivery</h3>
+                </div>
+                <div class="service-item">
+                    <img src="Home Services.png" alt="Home Services">
+                    <h3>Home Services</h3>
+                </div>
+                <div class="service-item">
+                    <img src="Pharma.png" alt="Pharma Delivery">
+                    <h3>Pharma Delivery</h3>
+                </div>
+                <div class="service-item">
+                    <img src="Beauty.png" alt="Beauty Services">
+                    <h3>Beauty Services</h3>
+                </div>
+                <div class="service-item">
+                    <img src="flower.png" alt="Flower Delivery">
+                    <h3>Flower Delivery</h3>
+                </div>
+                <div class="service-item">
+                    <img src="fleet management.png" alt="Fleet Management">
+                    <h3>Fleet Management</h3>
+                </div>
+                <div class="service-item">
+                    <img src="Pickup.png" alt="Pickup & Delivery">
+                    <h3>Pickup & Delivery</h3>
+                </div>
+                <div class="service-item">
+                    <img src="Beverages.png" alt="Beverages Delivery">
+                    <h3>Beverages Delivery</h3>
+                </div>
+                <div class="service-item">
+                    <img src="Beauty_Services.png" alt="Beauty Services">
+                    <h3>Beauty Services</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonial-container">
+            <div class="testimonial-text">
+                <h2 style="color: #001a72; font-size: 40px; font-weight: 700;">What our <span style="color: #ee7238;">clients</span> say about us.</h2>
+                <p style="color: black; font-size: 20px; font-weight: 300;" >Aliquam tristique libero at dui sodales, et placerat orci lobortis. Donec metus lorem, vulputate at
+                    sapien.<p>
+            </div>
+            <div class="testimonial-images">
+                <img src="Feedback_1.png" alt="Client testimonial">
+                <img src="Feedback_2.png" alt="Client testimonial">
+                <img src="Feedback_3.png" alt="Client testimonial">
+                <img src="Feedback_4.png" alt="Client testimonial">
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="blog-container">
+            <div class="blog-header">
+                <h2>Our Latest Blog Posts.</h2>
+                <a href="https://snabbtech.com/blog-news/">View All</a>
+            </div>
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <img src="mobile_development.jpg" alt="Mobile App Development">
+                    <div class="blog-post-content">
+                        <p class="blog-post-meta">SnabbTech • November 12, 2024</p>
+                        <h3>Mobile App Development for Business Transformation</h3>
+                        <button class="btn">Read More</button>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="businees_model.jpg" alt="Business Idea">
+                    <div class="blog-post-content">
+                        <p class="blog-post-meta">SnabbTech • November 11, 2024</p>
+                        <h3>How Can Snabbtech Help You Transform Your Idea Into A Complete Business Model With
+                            Expertise?</h3>
+                        <button class="btn">Read More</button>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="research.png" alt="Innovation">
+                    <div class="blog-post-content">
+                        <p class="blog-post-meta">SnabbTech • November 10, 2024</p>
+                        <h3>Make Something People Need</h3>
+                        <button class="btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" style="background-color: #003366;">
+        <div class="contact-container"  style="margin: 0 10px;">
+            <div class="contact-text" >
+                <h1 style="color: white; font-size: 50px; font-weight: 600;">Get in Touch</h1>
+                <p style="color: white; font-size: 24px; font-weight: 300;">Have something to share or inquire about? We're here to listen. Use the form below to send us a
+                    message, and we'll be sure to get back to you promptly. Whether you have questions, feedback, or
+                    just want to connect, we're eager to hear from you. Your input matters to us, and we're dedicated to
+                    providing you with the support and assistance you need. Let's start the conversation!</p>
+            </div>
+            <div class="contact-form" style="max-width: 500px; margin: 0 auto; padding: 20px; font-family: 'Segoe UI', Roboto, sans-serif;">
+                <form action="https://getform.io/f/662986cf-6b40-4f07-9c7a-0ffa3da953af" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" name="Name" placeholder="Enter your Name..." required 
+                           style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                    
+                    <input type="email" name="Email" placeholder="Enter your Email..." required 
+                           style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                    
+                    <input type="tel" name="phone" placeholder="Phone" required 
+                           style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;">
+                    
+                    <textarea name="Message" placeholder="How can we help you?" required 
+                              style="padding: 12px 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; min-height: 100px; resize: vertical;"></textarea>
+                    
+                    <div style="display: flex; align-items: center; gap: 8px; margin: 5px 0 15px 0;">
+                        <input type="checkbox" id="robotCheck" required 
+                               style="width: 16px; height: 16px;">
+                        <label for="robotCheck" style="font-size: 14px; color: #555;">I'm not a robot</label>
+                    </div>
+                    
+                    <button type="submit" 
+                            style="padding: 12px 25px; background-color: #4CAF50; color: white; font-weight: 500; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; transition: background-color 0.3s;">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="reviews-container">
+            <h4>SnabbTech Reviews  ☆ ☆ ☆ ☆ ☆</h4>
+            <div class="review-logos">
+                <img src="reviews (1).png" style="height: 200px; width: 200px;" alt="Trustpilot">
+                <img src="reviews (2).png" style="height: 200px; width: 200px;" alt="Clutch">
+                <img src="reviews (3).png" style="height: 200px; width: 200px;"alt="Google Reviews">
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                <img src="review 4 (1).png" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content" style="margin: 50px;">
+            <div class="footer-links">
+                <img src="Snabbtech_logo.png">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:ashish@snabbtech.com">ashish@snabbtech.com</a></li>
+                    <li><a href="tel:+919023893092">+91 9023893092</a></li>
+                    <li>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Pages</h3>
+                <ul>
+                    <li><a href="https://snabbtech.com/about-us/">About</a></li>
+                    <li><a href="https://snabbtech.com/software-development-services/">Services</a></li>
+                    <li><a href="https://snabbtech.com/industry/">Industry</a></li>
+                    <li><a href="https://snabbtech.com/portfolio/">Portfolio</a></li>
+                    <li><a href="https://snabbtech.com/partnership/">Partnership</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web app development</a></li>
+                    <li><a href="#">Mobile app development</a></li>
+                    <li><a href="#">Custom app development</a></li>
+                </ul>
+            </div>
+            <div class="footer-links newsletter">
+                <h3>Our Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Email..." required>
+                    <button type="submit">Send</button>
+                </form>
+                <p>Stay informed, inspired, and engaged with our curated newsletter, delivering the latest trends,
+                    insightful articles, and practical tips straight to your inbox.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SnabbTech. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="popup" id="popupForm">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Let’s Snabb Success<br>For Your Business!</h2>
+            <input type="text" placeholder="Enter your Name...">
+            <input type="email" placeholder="Enter your email...">
+            <input id="phone" type="tel" name="phone" placeholder="Phone">
+            <textarea rows="4" placeholder="How we can help you?"></textarea>
+
+            <div style="margin-bottom: 15px;">
+                <input type="checkbox" id="robotCheck">
+                <label for="robotCheck">I'm not a robot</label>
+            </div>
+            <button class="submit">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById("popupForm").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popupForm").style.display = "none";
+        }
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+        const phoneInput = document.querySelector("#phone");
+        window.intlTelInput(phoneInput, {
+            initialCountry: "in",
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
